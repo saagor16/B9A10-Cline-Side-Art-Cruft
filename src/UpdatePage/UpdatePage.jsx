@@ -1,56 +1,10 @@
 
-import Swal from 'sweetalert2'
-
-const AddPage = () => {
-
-    const handleAdd = event =>{
-        event.preventDefault();
-
-        const form = event.target;
-
-        const itemName = form.itemName.value;
-        const imageUrl = form.imageUrl.value;
-        const subcategoryName = form.subcategoryName.value;
-        const processingTime = form.processingTime.value;
-        const description = form.description.value;
-        const price = form.price.value;
-        const rating = form.rating.value;
-        const customization = form.customization.value;
-        const stockStatus = form.stockStatus.value;
-        const userEmail = form.userEmail.value;
-        const userName = form.userName.value;
-
-        const newArt = { itemName, imageUrl, subcategoryName, processingTime, description, price, rating, customization, stockStatus, userEmail,userName};
-        console.log(newArt);
-
-        fetch('http://localhost:5000/art', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newArt)
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Card Added Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
-            }
-        })
-
-
-    }
-
-
+const UpdatePage = () => {
     return (
-        <div className="max-w-4xl mx-auto p-5">
+        <div>
+          <div className="max-w-4xl mx-auto p-5">
             <h2 className="text-2xl font-bold mb-6 text-center">Add Craft Item</h2>
-            <form onSubmit={handleAdd} className="space-y-5">
+            <form className="space-y-5">
                 <div className="flex flex-wrap -mx-2">
                     <div className="w-full md:w-1/2 px-2 mb-4">
                         <label className="block font-medium">Item Name:</label>
@@ -165,8 +119,9 @@ const AddPage = () => {
                     </button>
                 </div>
             </form>
+        </div>  
         </div>
     );
 };
 
-export default AddPage;
+export default UpdatePage;

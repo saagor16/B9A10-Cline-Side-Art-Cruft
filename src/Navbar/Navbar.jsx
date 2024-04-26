@@ -73,6 +73,21 @@ const Navbar = () => {
         <>
           <li>
             <NavLink
+              to="/update"
+              style={({ isActive }) => ({
+                color: isActive ? "#fff" : "",
+                background: isActive ? "#7600dc" : "",
+              })}
+            >
+              Update Page
+            </NavLink>
+          </li>
+        </>
+      )}
+      {user && (
+        <>
+          <li>
+            <NavLink
               to="/my"
               style={({ isActive }) => ({
                 color: isActive ? "#fff" : "",

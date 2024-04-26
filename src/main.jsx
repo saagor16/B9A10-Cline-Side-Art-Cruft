@@ -15,6 +15,7 @@ import Profile from "./UserProfile/Profile.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import AddPage from "./AddPage/AddPage.jsx";
 import MyCard from "./MyCard/MyCard.jsx";
+import UpdatePage from "./UpdatePage/UpdatePage.jsx";
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/add",
         element:<PrivateRoute><AddPage></AddPage></PrivateRoute>,
+      },
+      {
+        path: "/update",
+        element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
       },
       {
         path: "/my",
