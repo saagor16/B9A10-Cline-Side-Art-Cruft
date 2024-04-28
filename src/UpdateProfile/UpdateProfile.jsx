@@ -43,7 +43,7 @@ const UpdateProfile = () => {
           />
         </div>
         <div>
-          <label>Your Name:</label>
+          <label>Your email:</label>
           <input
             type="text"
             name="name"

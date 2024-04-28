@@ -73,21 +73,6 @@ const Navbar = () => {
         <>
           <li>
             <NavLink
-              to="/update"
-              style={({ isActive }) => ({
-                color: isActive ? "#fff" : "",
-                background: isActive ? "#7600dc" : "",
-              })}
-            >
-              Update Page
-            </NavLink>
-          </li>
-        </>
-      )}
-      {user && (
-        <>
-          <li>
-            <NavLink
               to="/my"
               style={({ isActive }) => ({
                 color: isActive ? "#fff" : "",
@@ -125,7 +110,6 @@ const Navbar = () => {
           </li>
         </>
       )}
-    
     </>
   );
 
@@ -178,11 +162,13 @@ const Navbar = () => {
                 <div
                   tabIndex={0}
                   role="button"
-                  className="btn btn-ghost btn-circle avatar mr-4 tooltip tooltip-bottom"
+                  className="btn btn-ghost btn-circle avatar mr-4 tooltip tooltip-bottom "
                   data-tip={user.displayName}
                 >
+                  
                   <div className="rounded-full">
                     <img alt={user.displayName} src={user.photoURL} />
+                    
                   </div>
                 </div>
                 <button onClick={handleLogOut} className="btn btn-primary">

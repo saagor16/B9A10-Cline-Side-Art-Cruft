@@ -16,6 +16,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import AddPage from "./AddPage/AddPage.jsx";
 import MyCard from "./MyCard/MyCard.jsx";
 import UpdatePage from "./UpdatePage/UpdatePage.jsx";
+import Single from "./Single/Single.jsx";
 
 
 const router = createBrowserRouter([
@@ -49,16 +50,25 @@ const router = createBrowserRouter([
         element:<PrivateRoute><AddPage></AddPage></PrivateRoute>,
       },
       {
-        path: "/update",
-        element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
+        path: "/art/:id",
+        element:<UpdatePage></UpdatePage>,
+        // loader : ({params})=>fetch(`http://localhost:5000/art/${params.id}`)
       },
       {
         path: "/my",
         element:<PrivateRoute><MyCard></MyCard></PrivateRoute>,
+        loader:()=>fetch('http://localhost:5000/art'),
       },
       {
         path: "/art",
         element: <AllArt></AllArt>,
+        loader:()=>fetch('http://localhost:5000/art'),
+      },
+      {
+        path: "/single/:id",
+        element:<PrivateRoute><Single></Single></PrivateRoute>,
+        loader:() =>
+        (fetch('http://localhost:5000/art')),
       },
     ],
   },
