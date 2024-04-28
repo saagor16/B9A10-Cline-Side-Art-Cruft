@@ -1,9 +1,11 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const handleLogOut = () => {
     logOut();
@@ -29,6 +31,24 @@ const Navbar = () => {
 
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const navLinks = (
     <>
@@ -84,32 +104,7 @@ const Navbar = () => {
           </li>
         </>
       )}
-      <li>
-        <NavLink
-          to="/profile"
-          style={({ isActive }) => ({
-            color: isActive ? "#fff" : "",
-            background: isActive ? "#7600dc" : "",
-          })}
-        >
-          Profile
-        </NavLink>
-      </li>
-      {user && (
-        <>
-          <li>
-            <NavLink
-              to="/updateProfile"
-              style={({ isActive }) => ({
-                color: isActive ? "#fff" : "",
-                background: isActive ? "#7600dc" : "",
-              })}
-            >
-              Update Profile
-            </NavLink>
-          </li>
-        </>
-      )}
+      
     </>
   );
 
@@ -159,17 +154,28 @@ const Navbar = () => {
           <div className="navbar-end">
             {user ? (
               <div className="flex items-center">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost btn-circle avatar mr-4 tooltip tooltip-bottom "
-                  data-tip={user.displayName}
-                >
-                  
-                  <div className="rounded-full">
-                    <img alt={user.displayName} src={user.photoURL} />
-                    
+                <div className="dropdown">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost btn-circle avatar mr-4 tooltip tooltip-left "
+                    data-tip={user.displayName}
+                    onClick={toggleDropdown}
+                  >
+                    <div className="rounded-full">
+                      <img alt={user.displayName} src={user.photoURL} />
+                    </div>
                   </div>
+                  {isOpen && (
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-300 rounded-box w-36 ">
+                      <li>
+                        <Link to="/profile">Profile</Link>
+                      </li>
+                      <li>
+                        <Link to="/updateProfile">Update Profile</Link>
+                      </li>
+                    </ul>
+                  )}
                 </div>
                 <button onClick={handleLogOut} className="btn btn-primary">
                   Logout
