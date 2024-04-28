@@ -2,10 +2,11 @@
 
 
 const Single = () => {
+
  
 
   return (
-   <div>h2</div>
+   <div></div>
 
 
   );

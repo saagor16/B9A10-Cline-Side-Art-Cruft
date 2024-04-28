@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element:<PrivateRoute><Profile></Profile></PrivateRoute>,
+        element:<Profile></Profile>,
       },
       {
         path: "/add",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: "/art/:id",
         element:<UpdatePage></UpdatePage>,
-        // loader : ({params})=>fetch(`http://localhost:5000/art/${params.id}`)
+        
       },
       {
         path: "/my",
