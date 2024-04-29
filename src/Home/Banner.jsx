@@ -4,7 +4,7 @@ const Banner = () => {
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <img
-            src="https://images.unsplash.com/photo-1579541671172-43429ce17aca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc1fHxBcnQlMjAlMjYlMjBDcmFmdCUyMFN0b3JlfGVufDB8fDB8fHww"
+            src="https://live.staticflickr.com/8504/8344971849_a565b4d791_z.jpg"
             className="w-full lg:h-[720px] rounded-xl"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
