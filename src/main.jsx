@@ -28,6 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader:()=>fetch('http://localhost:5000/art'),
       },
       {
         path: "/login",
@@ -67,8 +68,7 @@ const router = createBrowserRouter([
       {
         path: "/single/:id",
         element:<PrivateRoute><Single></Single></PrivateRoute>,
-        // loader:() =>
-        // (fetch('../data.json')),
+        
       },
       
       
