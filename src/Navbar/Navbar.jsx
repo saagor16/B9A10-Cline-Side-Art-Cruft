@@ -1,7 +1,6 @@
 import { useContext, useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -107,21 +106,19 @@ const Navbar = () => {
       )}
     </>
   );
-  <Tooltip anchorSelect=".my-anchor-element" place="left">
-    {user.displayName}
-  </Tooltip>;
+  
 
   return (
     <div>
 
         <div className="">
-          <div className="navbar rounded-xl shadow-lg  p-4">
-            <div className="navbar-start">
-              <div className="dropdown lg:hidden">
+          <div className="navbar rounded-xl shadow-lg pt-6 lg:p-4">
+            <div className="navbar-start ">
+              <div className="dropdown lg:hidden ">
                 <div
                   tabIndex={0}
                   role="button"
-                  className="btn btn-ghost"
+                  className="btn btn-ghost pr-0.5"
                   onClick={toggleMenu}
                 >
                   <svg
@@ -147,7 +144,7 @@ const Navbar = () => {
               </div>
               <Link
                 to={"/"}
-                className="btn btn-ghost text-lg md:text-2xl lg:text-3xl gap-0 text-secondary normal-case"
+                className="btn btn-ghost text-lg md:text-2xl lg:text-3xl gap-0 text-secondary normal-case p-0.5"
               >
                 Crufty<span className="text-primary">Creations</span>
               </Link>
@@ -162,7 +159,7 @@ const Navbar = () => {
                     <div
                       tabIndex={0}
                       role="button"
-                      className="btn btn-ghost btn-circle avatar mr-4 tooltip tooltip-left "
+                      className="btn btn-ghost btn-circle avatar lg:mr-4 mr-1 tooltip tooltip-left "
                       data-tip={user.displayName}
                       onClick={toggleDropdown}
                     >
@@ -186,7 +183,7 @@ const Navbar = () => {
                   </button>
                 </div>
               ) : (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 lg:gap-2">
                   <Link to="/register">
                     <p className="btn btn-secondary">Register</p>
                   </Link>
@@ -205,7 +202,7 @@ const Navbar = () => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off fill-current w-10 h-10"
+                    className="swap-off fill-current w-10 h-10 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
