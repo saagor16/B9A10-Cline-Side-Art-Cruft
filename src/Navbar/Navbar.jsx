@@ -145,7 +145,7 @@ const Navbar = () => {
               to={"/"}
               className="btn btn-ghost text-lg md:text-2xl lg:text-3xl gap-0 text-secondary normal-case"
             >
-              Name<span className="text-primary">Art</span>
+              Crufty<span className="text-primary">Creations</span>
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
