@@ -38,7 +38,7 @@ const AddPage = () => {
     };
     console.log(newArt);
 
-    fetch("http://localhost:5000/art", {
+    fetch("https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/art", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -62,6 +62,7 @@ const AddPage = () => {
   return (
     <div className="max-w-4xl mx-auto p-5">
       <Fade delay={1e3} cascade damping={1e-1}> <h2 className="text-2xl font-bold mb-6 text-center">Add Craft Item</h2></Fade>
+
       <form onSubmit={handleAdd} className="space-y-5">
         <div className="flex flex-wrap -mx-2">
           <div className="w-full md:w-1/2 px-2 mb-4">

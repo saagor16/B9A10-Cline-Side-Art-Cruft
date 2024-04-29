@@ -8,7 +8,7 @@ const UpdatePage = () => {
 
   const [product, setProduct] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/singleArt/${id}`)
+    fetch(`https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/singleArt/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -39,7 +39,7 @@ const UpdatePage = () => {
       customization,
       stockStatus,
     };
-    fetch(`http://localhost:5000/updateArt/${id}`, {
+    fetch(`https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/updateArt/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
