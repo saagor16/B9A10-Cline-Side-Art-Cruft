@@ -74,6 +74,17 @@ const Navbar = () => {
           All Art & craft Items
         </NavLink>
       </li>
+      <li className="mr-2">
+        <NavLink
+          to="/contact"
+          style={({ isActive }) => ({
+            color: isActive ? "#fff" : "",
+            background: isActive ? "#7600dc" : "",
+          })}
+        >
+          Contact
+        </NavLink>
+      </li>
       {user && (
         <>
           <li>

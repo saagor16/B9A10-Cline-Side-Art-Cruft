@@ -17,6 +17,7 @@ import AddPage from "./AddPage/AddPage.jsx";
 import MyCard from "./MyCard/MyCard.jsx";
 import UpdatePage from "./UpdatePage/UpdatePage.jsx";
 import Single from "./Single/Single.jsx";
+import Contact from "./Contact/Contact.jsx";
 
 
 const router = createBrowserRouter([
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
         path: "/single/:id",
         element:<PrivateRoute><Single></Single></PrivateRoute>,
         
+      },
+      {
+        path: "/contact",
+        element:<Contact></Contact>,
       },
       
       
