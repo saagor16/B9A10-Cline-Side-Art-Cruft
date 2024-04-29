@@ -16,7 +16,7 @@ const MyCard = () => {
   }, [user, allArtData]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   const myArt = allArtData.filter((art) => art.userEmail === user.email);
