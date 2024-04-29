@@ -34,7 +34,7 @@ const MyCard = () => {
   return (
     <div className="mt-10 container mx-auto text-center">
       <div>
-        <h2>All Art & Craft Items: {myArt.length}</h2>
+        <h2 className="text-2xl font-extrabold text-lime-500">My Art & Craft Items: {myArt.length}</h2>
       </div>
       <div>
         <select
