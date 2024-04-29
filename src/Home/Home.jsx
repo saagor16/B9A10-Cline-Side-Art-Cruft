@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import SixData from "./SixData";
 import Gallery from "./Gallery";
 import Starts from "./Starts";
+import Gift from "./Gift";
 
 const Home = () => {
   const short = useLoaderData();
@@ -21,6 +22,9 @@ const Home = () => {
       </div>
       <div className="container mx-auto mt-10">
         <Gallery></Gallery>
+      </div>
+      <div className="container mx-auto mt-10">
+        <Gift></Gift>
       </div>
       <div className="container mx-auto mt-10">
         <Starts></Starts>
