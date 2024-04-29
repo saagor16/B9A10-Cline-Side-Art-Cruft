@@ -1,8 +1,14 @@
-# React + Vite
+# Art And Cruft
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** [Art and Cruft ](https://b9a8-real-estate.web.app/)
 
-Currently, two official plugins are available:
+## npm Packages Used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Daisy UI](https://daisyui.com/)
+- [React Helmet](https://www.npmjs.com/package/react-helmet)
+- [React Toast](https://react-toast.com/)
+- [Mamba UI](https://mambaui.com/components)
+- [mongodb atlas](https://www.mongodb.com/atlas/database)
+- [React-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
+- [React Awesome reveal](https://www.npmjs.com/package/react-awesome-reveal)
