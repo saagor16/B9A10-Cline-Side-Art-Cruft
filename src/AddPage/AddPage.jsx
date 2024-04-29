@@ -134,8 +134,8 @@ const AddPage = () => {
               required
             >
               <option value="">Select</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
             </select>
           </div>
           <div className="w-full md:w-1/2 px-2 mb-4">

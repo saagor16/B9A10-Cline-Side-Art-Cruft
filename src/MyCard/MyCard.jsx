@@ -7,8 +7,7 @@ const MyCard = () => {
   const [loading, setLoading] = useState(true);
   const allArtData = useLoaderData();
   const { user } = useContext(AuthContext);
-  const [filter, setFilter] = useState('All');
-
+  const [filter, setFilter] = useState("All");
 
   useEffect(() => {
     if (user && allArtData) {
@@ -20,27 +19,35 @@ const MyCard = () => {
     return <div>Loading...</div>;
   }
 
-  const myArt = allArtData.filter(art => art.userEmail === user.email);
-
-  
+  const myArt = allArtData.filter((art) => art.userEmail === user.email);
+  const filteredArt = myArt.filter(art => {
+    switch (filter) {
+      case "Yes":
+        return art.customization;
+      case "No":
+        return !art.customization; 
+      default:
+        return true; 
+    }
+  });
 
   return (
     <div className="mt-10 container mx-auto text-center">
       <div>All Art & Craft Items: {myArt.length}</div>
       <div>
-        <select 
-          value={filter} 
+        <select
+          value={filter}
           onChange={(e) => setFilter(e.target.value)}
           className="border p-2 rounded-md"
         >
-          <option value="Customizable">Customizable</option>
+          <option value="All">All</option>
           <option value="Yes">Yes</option>
           <option value="No">No</option>
         </select>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-10">
-        {myArt.map((art) => (
-          <Card key={art._id} artData={art}  />
+        {filteredArt.map((art) => (
+          <Card key={art._id} artData={art} />
         ))}
       </div>
     </div>

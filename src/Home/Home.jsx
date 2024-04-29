@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import SixData from "./SixData";
+import Gallery from "./Gallery";
 
 const Home = () => {
   const short = useLoaderData();
@@ -16,6 +17,9 @@ const Home = () => {
         {shortSlice.map((art) => (
           <SixData key={art._id} artData={art} />
         ))}
+      </div>
+      <div className="container mx-auto mt-10">
+        <Gallery></Gallery>
       </div>
     </div>
   );

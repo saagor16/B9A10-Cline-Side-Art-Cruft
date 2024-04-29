@@ -45,7 +45,7 @@ const SixData = ({artData}) => {
           <hr />
           <div className="flex">
             <p className="text-sm text-gray-600">
-              <strong>Customizable:</strong> {customization ? "Yes" : "No"}
+              <strong>Customizable:</strong> {customization}
             </p>
             <p className="text-sm text-gray-600">
               <strong>Status:</strong> {stockStatus}

@@ -14,10 +14,9 @@ const Card = ({ artData }) => {
     customization,
     stockStatus,
   } = artData;
-
+  console.log(customization);
 
   const handleDelete = (id) => {
-
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -38,9 +37,7 @@ const Card = ({ artData }) => {
                 title: "Deleted!",
                 text: "Your Art has been deleted.",
                 icon: "success",
-              })
-             
-
+              });
             }
           });
       }
@@ -76,14 +73,16 @@ const Card = ({ artData }) => {
           <hr />
           <div className="flex">
             <p className="text-sm text-gray-600">
-              <strong>Customizable:</strong> {customization ? "Yes" : "No"}
+              <strong>Customizable:</strong> {customization}
             </p>
             <p className="text-sm text-gray-600">
               <strong>Status:</strong> {stockStatus}
             </p>
           </div>
           <div className="card-actions flex ">
-            <Link to={`/art/${_id}`} className="btn btn-primary w-36">Update</Link>
+            <Link to={`/art/${_id}`} className="btn btn-primary w-36">
+              Update
+            </Link>
             <button
               onClick={() => handleDelete(_id)}
               className="btn btn-primary w-36"
