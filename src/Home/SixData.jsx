@@ -1,24 +1,23 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
+const SixData = ({ artData }) => {
+  const {
+    _id,
+    itemName,
+    imageUrl,
+    subcategoryName,
+    processingTime,
+    description,
+    price,
+    rating,
+    customization,
+    stockStatus,
+  } = artData;
 
-const SixData = ({artData}) => {
-    const {
-        _id,
-        itemName,
-        imageUrl,
-        subcategoryName,
-        processingTime,
-        description,
-        price,
-        rating,
-        customization,
-        stockStatus,
-      } = artData;
-
-    return (
-        <div>
-            <div className="card w-96 bg-base-100 shadow-xl space-y-5">
+  return (
+    <div>
+      <div className="card w-96 h-full bg-base-100 shadow-xl space-y-5">
         <h2 className="text-lg font-bold text-gray-900">{itemName}</h2>
         <figure className="px-10 pt-10">
           <img src={imageUrl} alt="Shoes" className="rounded-xl" />
@@ -52,13 +51,14 @@ const SixData = ({artData}) => {
             </p>
           </div>
           <div className="card-actions flex ">
-            <Link to={`/single/${_id}`} className="btn btn-primary w-full">View Details</Link>
-            
+            <Link to={`/single/${_id}`} className="btn btn-primary w-full">
+              View Details
+            </Link>
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default SixData;
