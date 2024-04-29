@@ -46,8 +46,8 @@ const Card = ({ artData }) => {
 
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl space-y-5 h-full">
-        <h2 className="text-lg font-bold text-gray-900">{itemName}</h2>
+      <div className="card w-96 bg-orange-200 shadow-xl space-y-5 h-full">
+        <h2 className="text-lg font-bold text-gray-900 mt-5">{itemName}</h2>
         <figure className="px-10 pt-10">
           <img src={imageUrl} alt="Shoes" className="rounded-xl" />
         </figure>

@@ -20,25 +20,27 @@ const MyCard = () => {
   }
 
   const myArt = allArtData.filter((art) => art.userEmail === user.email);
-  const filteredArt = myArt.filter(art => {
+  const filteredArt = myArt.filter((art) => {
     switch (filter) {
       case "Yes":
         return art.customization;
       case "No":
-        return !art.customization; 
+        return !art.customization;
       default:
-        return true; 
+        return true;
     }
   });
 
   return (
     <div className="mt-10 container mx-auto text-center">
-      <div>All Art & Craft Items: {myArt.length}</div>
+      <div>
+        <h2>All Art & Craft Items: {myArt.length}</h2>
+      </div>
       <div>
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="border p-2 rounded-md"
+          className="border p-2 rounded-md mt-5"
         >
           <option value="All">All</option>
           <option value="Yes">Yes</option>

@@ -17,7 +17,7 @@ const SixData = ({ artData }) => {
 
   return (
     <div>
-      <div className="card w-96 h-full bg-base-100 shadow-xl space-y-5">
+      <div className="card w-96 h-full bg-yellow-100 shadow-xl space-y-5">
         <h2 className="text-lg text-center mt-3 font-bold text-gray-900">{itemName}</h2>
         <figure className="px-10 pt-10">
           <img src={imageUrl} alt="Shoes" className="rounded-xl" />

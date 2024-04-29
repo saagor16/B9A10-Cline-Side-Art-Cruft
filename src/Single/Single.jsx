@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import PageTitle from "../PageTitle/PageTitle";
+import { Slide } from "react-awesome-reveal";
+
 
 const Single = () => {
   const { id } = useParams();
@@ -64,7 +66,7 @@ const Single = () => {
           </Marquee>
         </div>
       </div>
-
+      <Slide>
       <section className="bg-gray-400  space-y-3 lg:h-[px] w-full rounded-xl mt-10">
         <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between space-y-8">
           <div className="flex items-center justify-center lg:pl-16  h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
@@ -107,6 +109,7 @@ const Single = () => {
           </div>
         </div>
       </section>
+      </Slide>
     </div>
   );
 };

@@ -1,16 +1,24 @@
 import { useLoaderData, Link } from "react-router-dom";
+import { useTypewriter } from 'react-simple-typewriter'
 
 const AllArt = () => {
   const artData = useLoaderData();
 
+  const [typewriter]= useTypewriter({
+    words:['All Art & Craft ','All Art & Craft'],
+    loop:{},
+    typeSpeed:100,
+    
+  })
+
   return (
     <div className="container mx-auto px-4 py-5">
       <h1 className="text-2xl font-bold text-center mb-6">
-        All Art & Craft Items
+        <span className="text-green-700">{typewriter}</span> Items
       </h1>
       <div className="overflow-x-auto">
-        <table className="w-full table-auto bg-white shadow-md rounded-lg">
-          <thead className="bg-gray-200">
+        <table className="w-full table-auto  shadow-md rounded-lg">
+          <thead className="bg-gray-600">
             <tr>
               <th className="px-4 py-2 text-left">No.</th>
               <th className="px-4 py-2 text-left">ItemName</th>
@@ -22,7 +30,7 @@ const AllArt = () => {
               <th className="px-4 py-2">Details</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="bg-gray-400 text-black">
             {artData.map((item, index) => (
               <tr key={item.id} className="border-b">
                 <td className="px-4 py-2">{index + 1}</td>
@@ -35,7 +43,7 @@ const AllArt = () => {
                 <td className="px-4 py-2 text-center">
                   <Link
                     to={`/single/${item._id}`}
-                    className="text-blue-500 hover:text-blue-700 transition duration-300"
+                    className="text-blue-800 hover:text-blue-700 transition duration-300"
                   >
                     View Details
                   </Link>
