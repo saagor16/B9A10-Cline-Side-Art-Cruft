@@ -1,6 +1,11 @@
+
+import { Slide } from "react-awesome-reveal";
+
+
 const Gallery = () => {
   return (
     <div>
+            <Slide>
       <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
         <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
           <img
@@ -55,6 +60,7 @@ const Gallery = () => {
           />
         </div>
       </section>
+      </Slide>
     </div>
   );
 };
