@@ -38,7 +38,9 @@ const Card = ({ artData }) => {
                 title: "Deleted!",
                 text: "Your Art has been deleted.",
                 icon: "success",
-              });
+              })
+             
+
             }
           });
       }

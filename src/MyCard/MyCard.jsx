@@ -8,6 +8,7 @@ const MyCard = () => {
   const allArtData = useLoaderData();
   const { user } = useContext(AuthContext);
 
+
   useEffect(() => {
     if (user && allArtData) {
       setLoading(false);
@@ -27,7 +28,7 @@ const MyCard = () => {
       <div>All Art & Craft Items: {myArt.length}</div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-10">
         {myArt.map((art) => (
-          <Card key={art._id} artData={art} />
+          <Card key={art._id} artData={art}  />
         ))}
       </div>
     </div>

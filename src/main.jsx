@@ -67,9 +67,11 @@ const router = createBrowserRouter([
       {
         path: "/single/:id",
         element:<PrivateRoute><Single></Single></PrivateRoute>,
-        loader:() =>
-        (fetch('http://localhost:5000/art')),
+        // loader:() =>
+        // (fetch('../data.json')),
       },
+      
+      
     ],
   },
 ]);

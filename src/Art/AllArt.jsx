@@ -34,7 +34,7 @@ const AllArt = () => {
                 <td className="px-4 py-2">{item.rating}</td>
                 <td className="px-4 py-2 text-center">
                   <Link
-                    to={`/single/${item.id}`}
+                    to={`/single/${item._id}`}
                     className="text-blue-500 hover:text-blue-700 transition duration-300"
                   >
                     View Details
