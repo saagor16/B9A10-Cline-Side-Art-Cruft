@@ -118,10 +118,9 @@ const AddPage = () => {
           <div className="w-full md:w-1/2 px-2 mb-4">
             <label className="block font-medium">Rating:</label>
             <input
-              type="number"
+              type=""
               name="rating"
-              min="1"
-              max="5"
+           
               className="block w-full p-2 border border-gray-300 rounded mt-1"
               required
             />

@@ -57,7 +57,7 @@ const Card = ({ artData }) => {
           </p>
           <p className="text-sm text-gray-600">
             <strong>Description:</strong>
-            {description}{" "}
+            {description.slice(0, 150)}{" "}
           </p>
           <div className="flex">
             <p className="text-sm text-gray-600">
