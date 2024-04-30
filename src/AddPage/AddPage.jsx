@@ -38,7 +38,7 @@ const AddPage = () => {
     };
     console.log(newArt);
 
-    fetch("https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/art", {
+    fetch("https://new-server-cruft-hodfnrwo8-saagor16s-projects.vercel.app/art", {
       method: "POST",
       headers: {
         "content-type": "application/json",

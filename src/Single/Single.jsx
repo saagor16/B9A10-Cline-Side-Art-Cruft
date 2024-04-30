@@ -12,7 +12,7 @@ const Single = () => {
 
   const [product, setProduct] = useState({});
   useEffect(() => {
-    fetch(`https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/singleArt/${id}`)
+    fetch(`https://new-server-cruft-hodfnrwo8-saagor16s-projects.vercel.app/singleArt/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);

@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/art'),
+        loader:()=>fetch('https://new-server-cruft-hodfnrwo8-saagor16s-projects.vercel.app/art'),
       },
       {
         path: "/login",
@@ -59,12 +59,12 @@ const router = createBrowserRouter([
       {
         path: "/my",
         element:<PrivateRoute><MyCard></MyCard></PrivateRoute>,
-        loader:()=>fetch('https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/art'),
+        loader:()=>fetch('https://new-server-cruft-hodfnrwo8-saagor16s-projects.vercel.app/art'),
       },
       {
         path: "/art",
         element: <AllArt></AllArt>,
-        loader:()=>fetch('https://new-server-cruft-1kzy3e5ut-saagor16s-projects.vercel.app/art'),
+        loader:()=>fetch('https://new-server-cruft-hodfnrwo8-saagor16s-projects.vercel.app/art'),
       },
       {
         path: "/single/:id",
