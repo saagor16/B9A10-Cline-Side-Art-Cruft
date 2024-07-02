@@ -14,6 +14,8 @@
 
 ## Client Side
 **GitHub Repository:** [Client Side](https://github.com/saagor16/B9A10-Cline-Side-Art-Cruft)
+## Server Side
+**GitHub Repository:** [Client Side](https://github.com/saagor16/B9A10-Server-Side-Art-Cruft)
 
 ## Project Overview
 Art And Cruft is a web application designed to showcase and manage art and craft items. It aims to provide a platform for users to explore a variety of art and craft items and for creators to add their own crafts. This project solves the problem of having a centralized place to view, add, and manage art and craft collections.
